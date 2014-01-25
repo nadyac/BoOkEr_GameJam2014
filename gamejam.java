@@ -5,11 +5,12 @@
 */
 import javax.swing.*;
 import java.awt.*;
-public class gamejam{
+
+public class GameJam{
 
 	public static void main(String[] args){
 
-		new loadwindow();
+		new Loadwindow();
 	}
 }
 
