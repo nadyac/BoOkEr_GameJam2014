@@ -10,9 +10,10 @@ public class Loadwindow{
 
 	public JFrame gameframe;
 	public JPanel gamepanel;
+	public JPanel gamepanel2;
 	private JButton button;
 	private JLabel label;
-	public RunGame game;
+	public GamePanel game;
 	public Loadwindow(){
 
 		gui();
@@ -34,8 +35,19 @@ public class Loadwindow{
 
 			public void actionPerformed(ActionEvent e){
 				//JOptionPane.showMessageDialog(null, "Fucking fucks motherfuckers fucktards");
-				game=new RunGame(); //creates new rungame object which runs the game
+				//game=new RunGame(); //creates new rungame object which runs the game
 				//startGame();
+				//gamepanel.setBackground(Color.WHITE);
+				//gamepanel2= game.getPanel2();
+				//gamepanel.setVisible(false);
+				//gamepanel2.setVisible(true);
+				 game=new GamePanel(new GridBagLayout());
+				 
+				gameframe.setContentPane(game);
+    			gameframe.validate();
+    	gameframe.repaint();
+
+
 			}
 		});
 		
@@ -55,6 +67,11 @@ public class Loadwindow{
 		gameframe.add(gamepanel);
 
 	}
+
+	public JPanel getPanel(){
+		return gamepanel;
+	}
+
 	/**public void startGame()
 	{
 		while(true) //real control loop

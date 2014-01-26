@@ -10,28 +10,24 @@ import java.awt.event.*;
 
 public class RunGame{
 
-	private JPanel panel2;
+	private GamePanel panel2;
 	private JButton dialogbtn;
+	public Loadwindow window;
 
 	public RunGame(){
 
-		//Draw method to make panel
-
-
-		/*frame2 = new JFrame("mainframe2");
-		frame2.setVisible(true);
-		frame2.setSize(900,600);
-		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
-
-		panel2 = new JPanel(new GridBagLayout());
+	//Create JPanel
+		panel2 = new GamePanel(new GridBagLayout());
 		panel2.setBackground(Color.WHITE);
 
-		JOptionPane.showMessageDialog(null, "Fucking fucks motherfuckers fucktards"); //testing 
+		//JOptionPane.showMessageDialog(null, "Fucking fucks motherfuckers fucktards"); //testing 
 
-		new Characters();		
+		
+			
 	}
 
-	public JPanel getPanel()
+	//returns the second (intro) panel of the game 
+	public GamePanel getPanel2()
 	{
 		//do all the updating for a new panel first
 		return panel2;
