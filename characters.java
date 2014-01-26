@@ -12,30 +12,16 @@ import java.io.*;
 
 public class Characters extends Component{
 
-	private BufferedImage characterimg;
-	private int x, y;
-	public Characters(String filepath, int x, int y)
-	{
-		this.x=x;
-		this.y=y;
-		characterimg= null;
+	private BufferedImage jodineimg, gesperimg, willyskyimg, bookerimg;
+	
+	public void displayjodine(){
+		
+		BufferedImage jodineimg= null;
 		try{
-			characterimg = ImageIO.read(new File(filepath));
+			jodineimg = ImageIO.read(new File("jodine1.png"));
 		}catch(IOException e){
 			JOptionPane.showMessageDialog(null, "image could not be loaded");
-		}	
-	}
-	
-	public BufferedImage getImage()
-	{
-		return characterimg;
-	}
-	public int getX()
-	{
-		return this.x;
-	}
-	public int getY()
-	{
-		return this.y;
+		}
+		
 	}
 }
